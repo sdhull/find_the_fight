@@ -8,6 +8,7 @@ This is the repository for the [Find the Fight](https://findthefight.org) websit
   - postgresql
 
 * Configuration
+  - use /etc/hosts or [pow](http://pow.cx/) to run your local server on findthefight.org
 
 * Database creation
 
