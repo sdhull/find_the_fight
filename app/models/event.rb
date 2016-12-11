@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   validates :description, presence: true
   validates :starts_at, presence: true
 
-  scope :upcoming, ->{ where("starts_at >= ?", Time.now) }
+  scope :upcoming, ->{ where("starts_at >= ?", Time.now).order("starts_at ASC") }
 
   has_many :user_events, dependent: :destroy
   has_many :users, through: :user_events

@@ -17,6 +17,6 @@
             .row
               .columns.small-6
                 = l event.starts_at.in_time_zone(event.timezone), format: :long
-              .columns.small-6
+              .columns.small-6.text-right
                 = icon "map-marker", class: "margin-right-1"
                 = event.city_name
