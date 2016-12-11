@@ -13,7 +13,26 @@
     = link_to "Call Your Legislator", "http://hellogov.org/", class: "button success large color-white", target: "_blank"
 
 .row
-  .columns.small-12
+  .columns.small-12.related-actions
+    %h4 Related Actions
+
+    .row
+      .columns.small-12
+        - @event.related_events.each do |event|
+          .row.collapse
+            .columns.small-12.event-row
+              .img= link_to image_tag(event.image_url), event_path(event)
+              .info
+                .title= link_to event.name, event_path(event)
+                .row
+                  .columns.small-6
+                    = l event.starts_at.in_time_zone(event.timezone), format: :long
+                  .columns.small-6.text-right
+                    = icon "map-marker", class: "margin-right-1"
+                    = event.city_name
+
+.row
+  .columns.small-12.margin-bottom-3
     .row
       .columns.small-4.text-center
         = link_to "https://www.facebook.com/sharer/sharer.php?#{ {u: root_url}.to_param }", target: "_blank" do
