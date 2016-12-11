@@ -13,4 +13,12 @@
     .row
       .columns.small-12
         %h1.site-title= link_to "Find the Fight", root_path
+    -# flash notifications
+    - alert_mappings = {"info" => "primary", "notice" => "primary", "error" => "alert", "alert" => "alert"}
+    - flash.each do |k, v|
+      - next unless alert_mappings[k].present?
+      .callout{class: [alert_mappings[k], k], data: {closable: true}}
+        = v
+        %button.close-button(aria-label="Dismiss alert" type="button" data-close)
+          %span(aria-hidden="true") &times;
     = yield
