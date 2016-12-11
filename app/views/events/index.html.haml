@@ -2,7 +2,7 @@
   .columns.small-12
     = form_for "search" do |f|
       .input-group
-        = f.search_field "Location", class: "input-group-field"
+        = f.text_field "Location", class: "input-group-field"
         .input-group-button
           = f.submit "Search", class: "button success color-white"
 
