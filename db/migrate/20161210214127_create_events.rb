@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :image_url
       t.text :description, null: false
       t.timestamp :starts_at, null: false
+      t.timestamp :ends_at
 
       t.timestamps
     end

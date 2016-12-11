@@ -2,6 +2,7 @@
 
 .event-row {
   border: 1px solid $medium-gray;
+  margin-bottom: 20px;
 
   img {
     border-bottom: 5px solid map-get($foundation-palette, alert);
