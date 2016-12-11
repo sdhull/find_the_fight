@@ -6,7 +6,7 @@
     = form_for "search" do |f|
       .input-group
         %span.input-group-label
-          %i.fa.fa-search(aria-hidden="true")
+          = icon "search"
         = f.search_field "Location", class: "input-group-field"
         .input-group-button
           = f.submit "Search", class: "button primary"
