@@ -16,3 +16,18 @@
     font-weight: bold;
   }
 }
+
+.event-details {
+  border-bottom: 1px solid $medium-gray;
+
+  img {
+    width: 100%;
+  }
+  .info {
+    padding: 20px;
+  }
+  .title {
+    font-size: 125%;
+    font-weight: bold;
+  }
+}

@@ -1,13 +1,14 @@
-.row
-  .columns.small-12
-    %h2= @event.name
-
-.row
-  .columns.small-12
-    %em= l @event.starts_at.in_time_zone(@event.timezone), format: :long
-
-.row
-  .columns.small-12#map{style: "min-height: 20vh", data: {lat: @event.lat, lon: @event.lon}}
+.row.collapse
+  .columns.small-12.event-details
+    .img= link_to image_tag(@event.image_url), event_path(@event)
+    .info
+      .title= link_to @event.name, event_path(@event)
+      .row
+        .columns.small-12.medium-6
+          = l @event.starts_at.in_time_zone(@event.timezone), format: :long
+        .columns.small-12.medium-6.small-text-right
+          = icon "map-marker", class: "margin-right-1"
+          = @event.city_name
 
 .row
   .columns.small-12
@@ -27,9 +28,12 @@
             .columns.small-4.text-center
               = link_to "Share on Google+", "https://plus.google.com/share?#{ {url: event_url(@event)}.to_param }", target: "_blank"
       - else
-        = button_to "Join the Fight!", join_event_path(@event), method: :post, class: "button large full-width", disable_with: "Saving..."
+        = button_to "Join the Fight!", join_event_path(@event), method: :post, class: "button large full-width color-white", data: {disable_with: "Joining..."}
     - else
       = form_for @user, url: user_registration_path do |f|
         = f.text_field :email_or_phone, placeholder: "Email or phone number"
         = f.hidden_field :event_ids, value: @event.id, multiple: true
-        = f.submit "Join the Fight!", class: "button large full-width success", disable_with: "Saving..."
+        = f.submit "Join the Fight!", class: "button large full-width success color-white", data: {disable_with: "Joining..."}
+
+.row
+  .columns.small-12#map{style: "min-height: 20vh", data: {lat: @event.lat, lon: @event.lon}}
