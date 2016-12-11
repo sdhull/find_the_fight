@@ -1,5 +1,6 @@
 @import "settings";
 
+h1.site-title { text-transform: uppercase; }
 img.logo { max-height: 40px; }
 .right { float: right; }
 .left { float: left; }
@@ -42,7 +43,7 @@ img.logo { max-height: 40px; }
 
 @each $name, $value in $foundation-palette {
   .color-#{$name} {
-    color: $value;
+    color: $value !important;
   }
 }
 .fb-button {

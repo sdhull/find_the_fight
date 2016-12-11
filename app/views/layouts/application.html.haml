@@ -9,4 +9,7 @@
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .row
+      .columns.small-12
+        %h1.site-title= link_to "Find the Fight", root_path
     = yield

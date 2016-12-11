@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   def index
-    Event.upcoming.limit(20)
+    @events = Event.upcoming.limit(20)
+  end
+
+  def show
+    @event = Event.find params[:id]
   end
 
   def followup

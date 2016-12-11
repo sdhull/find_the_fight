@@ -1,0 +1,25 @@
+= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCKCin-26T6INKx4awqFqrj1sfDPm3_92E&callback=initMap", async: true, defer: true
+
+.row
+  .columns.small-12
+    %h2= @event.name
+
+.row
+  .columns.small-12
+    %em= l @event.starts_at.in_time_zone(@event.timezone), format: :long
+
+.row
+  .columns.small-12#map(style="min-height: 20vh")
+
+.row
+  .columns.small-12
+    %p= simple_format @event.description
+
+:javascript
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: #{@event.lat}, lng: #{@event.lon}},
+      zoom: 11
+    });
+  }

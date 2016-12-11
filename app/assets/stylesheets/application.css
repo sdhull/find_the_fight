@@ -13,6 +13,8 @@
  *= require_self
  *= require foundation_and_overrides
  *= require font_awesome
+ *= require common
+ *= require events
 
  */
 

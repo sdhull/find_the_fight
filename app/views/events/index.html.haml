@@ -1,12 +1,22 @@
 .row
   .columns.small-12
-    %h1 Find the Fight
-.row
-  .columns.small-12
     = form_for "search" do |f|
       .input-group
-        %span.input-group-label
-          = icon "search"
         = f.search_field "Location", class: "input-group-field"
         .input-group-button
-          = f.submit "Search", class: "button primary"
+          = f.submit "Search", class: "button success color-white"
+
+.row
+  .columns.small-12
+    - @events.each do |event|
+      .row.collapse
+        .columns.small-12.event-row
+          .img= image_tag event.image_url
+          .info
+            .title= link_to event.name, event_path(event)
+            .row
+              .columns.small-6
+                = l event.starts_at.in_time_zone(event.timezone), format: :long
+              .columns.small-6
+                = icon "map-marker", class: "margin-right-1"
+                = event.city_name

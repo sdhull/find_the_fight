@@ -21,3 +21,16 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      long: "%a, %b %d, %Y at %l:%M%P %Z"
+      short: "%-m/%-d/%Y"
+      hour_and_min: "%H:%M"
+      hour_and_min_12: "%l:%M %P"
+      month_and_day: "%B %-d, %Y"
+      month_and_year: "%B %Y"
+      time_and_date: "%-m/%-d/%Y at %l:%M%P"
+      schedule_date_format: "%a %b %d, %Y"
+      schedule_time_format: "%k:%M %P"
+      time_with_zone: "%l:%M %P %Z"
+      us_date: "%m/%d/%Y"

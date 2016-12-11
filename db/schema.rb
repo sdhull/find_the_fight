@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 20161210232535) do
     t.string   "name",          null: false
     t.float    "lat",           null: false
     t.float    "lon",           null: false
+    t.string   "timezone",      null: false
     t.string   "location_name", null: false
+    t.string   "image_url"
     t.text     "description",   null: false
     t.datetime "starts_at",     null: false
     t.datetime "created_at",    null: false

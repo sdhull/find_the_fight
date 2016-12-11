@@ -1,0 +1,17 @@
+@import 'settings';
+
+.event-row {
+  border: 1px solid $medium-gray;
+
+  img {
+    border-bottom: 5px solid map-get($foundation-palette, alert);
+    width: 100%;
+  }
+  .info {
+    padding: 20px;
+  }
+  .title {
+    font-size: 125%;
+    font-weight: bold;
+  }
+}
