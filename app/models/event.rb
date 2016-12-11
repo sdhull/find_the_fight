@@ -17,9 +17,9 @@ class Event < ApplicationRecord
 
   def related_events
     if name.downcase.include? "women"
-      Event.where("name ILIKE '%women%' OR name ILIKE '%woman%'")
+      Event.where("name ILIKE '%women%' OR name ILIKE '%woman%'").where.not(id: id)
     else
-      Event.where("name NOT ILIKE '%women%' AND name NOT ILIKE '%woman%'")
+      Event.where("name NOT ILIKE '%women%' AND name NOT ILIKE '%woman%'").where.not(id: id)
     end
   end
 end
