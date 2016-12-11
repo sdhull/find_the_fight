@@ -68,13 +68,13 @@ $foundation-palette: (
 );
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Titillium Web', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Titillium Web', Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 5px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;

@@ -1,5 +1,10 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import 'settings';
-$global-gutter: rem-calc(16);
+@import 'email_settings';
+
+/*$global-gutter: rem-calc(16);*/
 $button-padding: (
   tiny: 4px 8px 4px 8px,
   small: 5px 10px 5px 10px,
@@ -7,3 +12,7 @@ $button-padding: (
   large: 10px 20px 10px 20px,
 );
 @import "foundation-emails";
+
+.header .container {
+  border-bottom: 1px solid $light-gray;
+}

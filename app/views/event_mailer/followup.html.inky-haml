@@ -5,21 +5,26 @@
         %img{src: @event.image_url}
     %row.collapse
       %columns{small: 12}
-        %h1= @event.name
+        %h3= @event.name
+    %row.collapse
+      %columns{small: 12, large: 6}
+        %p
+          = l @event.starts_at, format: :schedule_date_format
+          %br
+          At #{l @event.starts_at, format: :time_with_zone}
+      %columns{small: 12, large: 6}
+        %p.text-right.small-text-left
+          = icon "map-marker", class: "margin-right-1"
+          = @event.city_name
 
 %container
   %spacer{size: 16}
-  %row
+  %row.collapse
     %columns{small: "12"}
       %p.lead Change doesn’t happen overnight, and getting involved is the first step.
       %p
         Thanks for <strong>Finding the Fight</strong> in #{@event.city_name}. The organizers of
         #{@event.name} have one favor to ask of you.
 
-      %button{href: followup_event_url(@event)} Take Action
-
-  %wrapper.secondary
-    %spacer{size: "16"}
-    %row
-      %columns{large: "12"}
-        %h5 Find the Fight
+      %spacer{size: 16}
+      %button{href: followup_event_url(@event), class: "radius large success"} Take Action
