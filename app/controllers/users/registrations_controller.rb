@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_sign_up_path_for(user)
     if params.fetch(:user, {})[:event_ids].present?
       flash[:notice] = "Great! You're all set to receive updates about this event."
-      event_path(params[:user_id][:event_ids].first)
+      event_path(params[:user][:event_ids].first)
     else
       flash[:notice] = "Great! You're all set."
       root_path
