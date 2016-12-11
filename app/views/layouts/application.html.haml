@@ -7,7 +7,7 @@
     %title= content_for?(:title) ? yield(:title) : "Find the Fight"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
-    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCKCin-26T6INKx4awqFqrj1sfDPm3_92E&callback=initMap", async: true, defer: true
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCKCin-26T6INKx4awqFqrj1sfDPm3_92E&callback=setMapsReady", async: true, defer: true
     = csrf_meta_tags
   %body
     .row
