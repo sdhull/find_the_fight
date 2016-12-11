@@ -11,7 +11,7 @@ Event.find_or_create_by name: "Women and Allies- Nationwide Protest",
   lat: 37.7951195,
   lon: -122.3952007,
   starts_at: Time.parse("Monday, December 12, 2016 at 3 PM PST"),
-  timezone: "PST",
+  timezone: "Pacific Time (US & Canada)",
   image_url: "https://s17.postimg.org/fx8gw48qn/ftf_event_detail_01.jpg",
   description: <<-EOF
 Join peaceful Women and Allies- Nationwide Protest - Dec. 12th NYC all over the US on December 12th and in SAN FRANCISCO! (if you are not in SAN FRANCISCO see times and dates for each city) or sign the petition online. 

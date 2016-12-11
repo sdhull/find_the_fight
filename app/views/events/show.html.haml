@@ -27,9 +27,9 @@
             .columns.small-4.text-center
               = link_to "Share on Google+", "https://plus.google.com/share?#{ {url: event_url(@event)}.to_param }", target: "_blank"
       - else
-        = button_to "Join the Fight!", join_event_path(@event), method: :post, class: "button large full-width"
+        = button_to "Join the Fight!", join_event_path(@event), method: :post, class: "button large full-width", disable_with: "Saving..."
     - else
       = form_for @user, url: user_registration_path do |f|
         = f.text_field :email_or_phone, placeholder: "Email or phone number"
         = f.hidden_field :event_ids, value: @event.id, multiple: true
-        = f.submit "Join the Fight!", class: "button large full-width success"
+        = f.submit "Join the Fight!", class: "button large full-width success", disable_with: "Saving..."
