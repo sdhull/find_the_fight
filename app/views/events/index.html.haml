@@ -1,2 +1,12 @@
-= form_for "search" do |f|
-  = f.search_field "Location"
+.row
+  .columns.small-12
+    %h1 Find the Fight
+.row
+  .columns.small-12
+    = form_for "search" do |f|
+      .input-group
+        %span.input-group-label
+          %i.fa.fa-search(aria-hidden="true")
+        = f.search_field "Location", class: "input-group-field"
+        .input-group-button
+          = f.submit "Search", class: "button primary"

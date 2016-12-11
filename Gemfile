@@ -4,6 +4,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'font-awesome-sass'
 gem 'foundation-rails'
 gem 'haml'
 gem 'jbuilder', '~> 2.5'

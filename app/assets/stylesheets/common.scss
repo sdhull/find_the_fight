@@ -1,0 +1,86 @@
+@import "settings";
+
+img.logo { max-height: 40px; }
+.right { float: right; }
+.left { float: left; }
+.stuck { position: fixed; }
+
+.content {
+  min-height: 100vh;
+  margin-top: 10px;
+}
+
+.top-bar {
+  width: 100%;
+  padding-left: 0px;
+  z-index: 100;
+}
+
+.small-txt {
+  font-size: 75%;
+}
+
+.small-txt {
+  font-size: 75%;
+}
+.medium-txt {
+  font-size: 100%;
+}
+.large-txt {
+  font-size: 125%;
+}
+.xlarge-txt {
+  font-size: 150%;
+}
+.xxlarge-txt {
+  font-size: 175%;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+@each $name, $value in $foundation-palette {
+  .color-#{$name} {
+    color: $value;
+  }
+}
+.fb-button {
+  background-color: $FB-blue;
+  &:hover {
+    background-color: darken($FB-blue, 10%);
+  }
+}
+
+@for $i from 1 through 5 {
+  .margin-top-#{$i} {
+    margin-top: $i * 10px;
+  }
+  .margin-bottom-#{$i} {
+    margin-bottom: $i * 10px;
+  }
+  .margin-left-#{$i} {
+    margin-left: $i * 10px;
+  }
+  .margin-right-#{$i} {
+    margin-right: $i * 10px;
+  }
+  .margin-#{$i} {
+    margin: $i * 10px;
+  }
+}
+
+.button.xlarge {
+  font-size: 1.75rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+dl {
+  line-height: 1.4;
+}
+dd {
+  margin-bottom: 0.5rem;
+}
