@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
   def index
     @events = Event.upcoming.limit(20)
+
+    respond_to do |format|
+      format.html { render layout: "hero" }
+      format.json
+    end
   end
 
   def show

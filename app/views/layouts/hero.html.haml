@@ -10,7 +10,8 @@
     = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCKCin-26T6INKx4awqFqrj1sfDPm3_92E&callback=setMapsReady", async: true, defer: true
     = csrf_meta_tags
   %body
-    = image_tag "logo-small.svg", class: "logo-absolute"
+    .header-wrapper.margin-bottom-2
+      = image_tag "logo-big.svg", class: "header-overlay"
     -# flash notifications
     - alert_mappings = {"info" => "primary", "notice" => "primary", "error" => "alert", "alert" => "alert"}
     - flash.each do |k, v|
