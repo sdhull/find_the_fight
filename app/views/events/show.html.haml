@@ -1,5 +1,7 @@
 .row.collapse
   .columns.small-12.event-details
+    = link_to root_path, class: "logo-absolute" do
+      = image_tag "logo-small.svg", class: "logo-absolute"
     .img= link_to image_tag(@event.image_url), event_path(@event)
     .info
       .title= link_to @event.name, event_path(@event)
