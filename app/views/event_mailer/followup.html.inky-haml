@@ -1,0 +1,25 @@
+%wrapper.header
+  %container
+    %row.collapse
+      %columns{small: 12}
+        %img{src: @event.image_url}
+    %row.collapse
+      %columns{small: 12}
+        %h1= @event.name
+
+%container
+  %spacer{size: 16}
+  %row
+    %columns{small: "12"}
+      %p.lead Change doesn’t happen overnight, and getting involved is the first step.
+      %p
+        Thanks for <strong>Finding the Fight</strong> in #{@event.city_name}. The organizers of
+        #{@event.name} have one favor to ask of you.
+
+      %button{href: followup_event_url(@event)} Take Action
+
+  %wrapper.secondary
+    %spacer{size: "16"}
+    %row
+      %columns{large: "12"}
+        %h5 Find the Fight
