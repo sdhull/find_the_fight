@@ -10,24 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211032859) do
+ActiveRecord::Schema.define(version: 20161211221714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
   create_table "events", force: :cascade do |t|
-    t.string   "name",          null: false
-    t.float    "lat",           null: false
-    t.float    "lon",           null: false
-    t.string   "timezone",      null: false
-    t.string   "location_name", null: false
+    t.string   "name",                 null: false
+    t.float    "lat",                  null: false
+    t.float    "lon",                  null: false
+    t.string   "timezone",             null: false
+    t.string   "location_name",        null: false
     t.string   "image_url"
-    t.text     "description",   null: false
-    t.datetime "starts_at",     null: false
+    t.text     "description",          null: false
+    t.datetime "starts_at",            null: false
     t.datetime "ends_at"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.text     "followup_description"
   end
 
   create_table "user_events", force: :cascade do |t|

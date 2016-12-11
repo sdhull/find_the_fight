@@ -13,6 +13,7 @@ Event.find_or_create_by name: "Women and Allies- Nationwide Protest",
   starts_at: Time.parse("Monday, December 12, 2016 at 3 PM PST"),
   timezone: "Pacific Time (US & Canada)",
   image_url: "https://s17.postimg.org/fx8gw48qn/ftf_event_detail_01.jpg",
+  followup_description: "The purpose of the march was to bring attention to one of the many deplorable components of Donald Trump's rise to the White House: his treatment of women.\nWith your help, we made a statement.\n\nNow, let's ensure we're heard.",
   description: <<-EOF
 Join peaceful Women and Allies- Nationwide Protest - Dec. 12th NYC all over the US on December 12th and in SAN FRANCISCO! (if you are not in SAN FRANCISCO see times and dates for each city) or sign the petition online. 
 EOF

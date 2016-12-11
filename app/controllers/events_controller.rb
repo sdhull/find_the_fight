@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   end
 
   def followup
+    @event = Event.find params[:id]
   end
 
   def join
