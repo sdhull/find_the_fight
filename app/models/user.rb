@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   before_validation :clean_phone, if: :phone_changed?
   before_validation :set_password, on: :create
-  validates :phone, presence: true, format: {with: /\d{10,11/, message: "must be 10 or 11 digits."}, if: :phone_required?
+  validates :phone, presence: true, format: {with: /\d{10,11}/, message: "must be 10 or 11 digits."}, if: :phone_required?
 
 
   def email_required?

@@ -5,6 +5,9 @@ class UserEvent < ActiveRecord::Base
   after_commit :send_followup_email, on: :create
 
   def send_followup_email
-    EventMailer.followup(event, user).deliver_now
+    msg = EventMailer.followup(event, user)
+    if msg.respond_to? :deliver_now
+      msg.deliver_now
+    end
   end
 end
