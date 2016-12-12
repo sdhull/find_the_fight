@@ -7,7 +7,6 @@ class EventMailer < ApplicationMailer
     else
       to_number = @user.phone.length == 10 ? "+1#{@user.phone}" : "+#{@user.phone}"
       msg = render_to_string "event_mailer/followup", formats: [:sms]
-      binding.pry
       twilio.messages.create(
         from: '+15109013137',
         to: to_number,
